@@ -23,7 +23,6 @@ const InputTester = observer(
       return (
         <StyledTextarea
           placeholder={placeholderText}
-          readonly
           value={inputState.output}
         />
       );

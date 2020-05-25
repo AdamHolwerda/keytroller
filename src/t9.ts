@@ -1,5 +1,5 @@
 import { observable, computed, action, IObservableArray, autorun } from "mobx";
-import RootStore from "./RootStore";
+import RootStore from "./stores/RootStore";
 //the idea of t9 is there's a button input multiple times.
 
 interface Keypress {
@@ -19,7 +19,7 @@ class InputState {
     [",.?!", "abc", "def"], //0
     ["ghi", "jkl", "mno"], // 1
     ["pqrs", "tuv", "wxyz"], //2
-    ["-+/", '("', ')"'] //3
+    ["-+/", '("', ')"'], //3
   ];
 
   //this.matrix[0[0]] === ",.?!";
@@ -38,7 +38,7 @@ class InputState {
   //this.matrix[0[0]][2] === "?"
   //this.matrix[0[0]][3] === "!"
 
-  determineLetter = array => {
+  determineLetter = (array: Keypress[]) => {
     const paramArray = array;
     console.log("param array is", paramArray);
 

@@ -17,11 +17,11 @@ import {
   StyledStick,
   StyledUpButton,
   StyledXButton,
-  StyledYButton
+  StyledYButton,
 } from "./styles";
 
 interface ControllerProps {
-  className: string;
+  className?: string;
 }
 
 @observer

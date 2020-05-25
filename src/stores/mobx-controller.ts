@@ -1,13 +1,17 @@
 import { observable, computed, action } from "mobx";
 import RootStore from "./RootStore";
 
+interface Button {
+  value: number;
+}
+
 class ControllerState {
   rootStore: RootStore;
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
   }
 
-  @observable buttons = [];
+  @observable buttons: Button[] = [];
   @observable axes = [];
 
   @computed get rightTrigger() {
@@ -110,7 +114,7 @@ class ControllerState {
     return this.axes[3] || 0;
   }
 
-  @action injectGamepad = gamepad => {
+  @action injectGamepad = (gamepad: any) => {
     if (gamepad != null) {
       this.buttons = gamepad.buttons;
       this.axes = gamepad.axes;

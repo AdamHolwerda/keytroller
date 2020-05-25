@@ -1,21 +1,22 @@
 {
-  "name": "t9-controller-thing",
+  "name": "keytroller",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
-    "mobx": "5.13.0",
-    "mobx-react": "6.1.3",
-    "react": "16.8.4",
-    "react-dom": "16.8.4",
-    "react-scripts": "2.1.3",
+    "@types/styled-components": "^5.1.0",
+    "mobx": "5.15.4",
+    "mobx-react": "6.2.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-scripts": "3.4.1",
     "styled-components": "5.1.0"
   },
   "devDependencies": {
-    "@types/react": "16.8.8",
-    "@types/react-dom": "16.8.2",
-    "typescript": "3.3.3"
+    "@types/react": "16.9.35",
+    "@types/react-dom": "16.9.8",
+    "typescript": "3.9.3"
   },
   "scripts": {
     "start": "react-scripts start",

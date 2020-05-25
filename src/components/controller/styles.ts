@@ -51,7 +51,18 @@ export const StyledControllerInterface = styled.div`
   }
 `;
 
-export const StyledButton = styled.div`
+interface StyledButtonProps {
+  value: number;
+}
+
+interface StyledStickProps {
+  value?: number;
+  stickButtonValue: number;
+  xValue: number;
+  yValue: number;
+}
+
+export const StyledButton = styled.div<StyledButtonProps>`
   box-sizing: border-box;
   padding-top: 5px;
   border: ${({ value }) => (value > 0 ? "1px solid gray" : "1px solid black")};
@@ -60,9 +71,10 @@ export const StyledButton = styled.div`
   text-align: center;
 `;
 
-export const StyledStick = styled.div`
+export const StyledStick = styled.div<StyledStickProps>`
   box-sizing: border-box;
-  border: ${({ value }) => (value > 0 ? "1px solid gray" : "1px solid black")};
+  border: ${({ value }) =>
+    value && value > 0 ? "1px solid gray" : "1px solid black"};
   border-radius: 50%;
   width: 62px;
   height: 62px;
@@ -73,7 +85,7 @@ export const StyledStick = styled.div`
     background: ${({ stickButtonValue }) =>
       stickButtonValue > 0 ? "black" : "gray"};
     border: ${({ value }) =>
-      value > 0 ? "1px solid gray" : "1px solid black"};
+      value && value > 0 ? "1px solid gray" : "1px solid black"};
     width: 50px;
     height: 50px;
     border-radius: 50%;

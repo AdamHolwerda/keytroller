@@ -1,7 +1,7 @@
 import { observer } from "mobx-react";
 import React, { Component } from "react";
 
-import { cS as controllerState } from "../initializer";
+import { cS as controllerState } from "../../initializer";
 
 const ControllerDebug = observer(
   class ControllerDebug extends Component {
